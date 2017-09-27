@@ -1,12 +1,12 @@
-#ifndef BASICMAZESOLVER_HPP
-#define BASICMAZESOLVER_HPP
+#ifndef MYMAZESOLVER_HPP
+#define MYMAZESOLVER_HPP
 
 #include "MazeSolver.hpp"
 #include "Maze.hpp"
 #include "MazeSolution.hpp"
 
 
-class BasicMazeSolver : public MazeSolver
+class MyMazeSolver : public MazeSolver
 {
 	public:
 	
@@ -17,4 +17,4 @@ class BasicMazeSolver : public MazeSolver
 		void recursiveSolveF(const Maze& maze, MazeSolution& mazeSolution, int x, int y);
 };
 
-#endif // BASICMAZESOLVER_HPP
+#endif // MYMAZESOLVER_HPP
