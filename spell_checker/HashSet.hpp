@@ -105,17 +105,6 @@ HashSet<T>::HashSet(const HashSet& s)
 
 
 template <typename T>
-HashSet<T>::HashSet(HashSet&& s)
-    : hashFunction{s.hashFunction}
-{
-	keytable = new Node*[DEFAULT_CAPACITY];
-	Capacity = s.Capacity;
-	Size = s.Size;
-	setnull();
-	copy(s.keytable, s.Capacity);
-}
-
-template <typename T>
 void HashSet<T>::copy(Node** k, int cap)
 {
 	for(int i = 0; i < cap; i++)
