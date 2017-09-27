@@ -35,7 +35,7 @@ private:
 	int Size;
 	
 	void destroyBST(Node* node);
-  void BSTSet<T>::copyBST(Node* oldN, Node* newN);
+  	void BSTSet<T>::copyBST(Node* oldN, Node* newN);
 };
 
 
@@ -103,7 +103,7 @@ void BSTSet<T>::add(const T& element)
 					Node* newNode = new Node;
 					newNode->key = element;
 					current->left = newNode;
-                    Size++;
+					Size++;
 				}
 			}
 			if(element > current->key)
@@ -117,7 +117,7 @@ void BSTSet<T>::add(const T& element)
 					Node* newNode = new Node;
 					newNode->key = element;
 					current->right = newNode;
-                    Size++;
+					Size++;
 				}
 			}
 		}
