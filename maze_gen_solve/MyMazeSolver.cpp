@@ -1,21 +1,21 @@
-#include "BasicMazeSolver.hpp"
+#include "MyMazeSolver.hpp"
 #include <iostream>
 #include "HelperFunctions.hpp"
 
 
-void BasicMazeSolver::solveMaze(const Maze& maze, MazeSolution& mazeSolution)
+void MyMazeSolver::solveMaze(const Maze& maze, MazeSolution& mazeSolution)
 {
 	visited.assign(maze.getWidth(), std::vector<int>(maze.getHeight(), 0));
 
 	mazeSolution.restart();
 
-	BasicMazeSolver::recursiveSolveF(maze, mazeSolution, std::get<0>(mazeSolution.getStartingCell()), std::get<1>(mazeSolution.getStartingCell()));
+	MyMazeSolver::recursiveSolveF(maze, mazeSolution, std::get<0>(mazeSolution.getStartingCell()), std::get<1>(mazeSolution.getStartingCell()));
 
 	return;
 }
 
 
-void BasicMazeSolver::recursiveSolveF(const Maze& maze, MazeSolution& mazeSolution, int x, int y)
+void MyMazeSolver::recursiveSolveF(const Maze& maze, MazeSolution& mazeSolution, int x, int y)
 {
 	visited[x][y] = 1;
 	int mazeWidth = maze.getWidth() - 1;
