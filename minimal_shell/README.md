@@ -1,14 +1,14 @@
 NAME
   
-    nsh – a minimal shell handling up to one pipe and input and output redirection
+    msh – a minimal shell handling up to one pipe and input and output redirection
 
 SYNOPSIS
 
-    nsh.c, parser.c, parser.h, Makefile
+    msh.c, parser.c, parser.h, Makefile
 
 DESCRIPTION
   
-    nsh is a minimal shell program, it will work with one pipe, or two commands, 
+    msh is a minimal shell program, it will work with one pipe, or two commands, 
      and works with input and output redirection.
 
 RUNNING
@@ -18,7 +18,7 @@ RUNNING
 
 QUITTING
     
-    CTRL+C will not work to quit the program, CTRL+\ will successfully make you quit nsh.
+    CTRL+C will not work to quit the program, CTRL+\ will successfully make you quit msh.
 
 NOTES
     
@@ -27,8 +27,8 @@ NOTES
       That will successfully do wc on the ls –l output into the file output.
   
     If you want to run a test script, commented out items starting with the pound sign, or #, will not be ran. 
-      The pound sign needs to be at the beginning for nsh to ignore it.
+      The pound sign needs to be at the beginning for msh to ignore it.
   
-    If you want to run a test script, simply call ./nsh <location/to/test/script>
+    If you want to run a test script, simply call ./msh <location/to/test/script>
   
-    Any program that is viable with execvp, or a standard shell, will work with nsh. 
+    Any program that is viable with execvp, or a standard shell, will work with msh. 
