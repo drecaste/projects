@@ -1,0 +1,1 @@
+Digital-to-Analog converter was used to generate analog voltage for the LED. The potentiometer turn angle controlled the DAC, the minimum voltage supplied to the LED was 1.5V and maximum was 5V.
