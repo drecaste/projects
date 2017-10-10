@@ -40,7 +40,6 @@ int currstats = 0;
 int currInt = 0;
 int a_opt = 0;
 int A_opt = 0;
-int L_opt = 0;
 int onlyargs = 0;
 
 char pathName[1000];
@@ -133,12 +132,9 @@ void check_opts(char * argument)
 			case 'A':
 				A_opt = 1;
 				break;
-			// 'a' is default behaviour - specified in a4 assignment
+			// 'a' is default behaviour
 			case 'a':
 				a_opt = 1;
-				break;
-			case 'L':
-				L_opt = 1;
 				break;
 		}
 	}
