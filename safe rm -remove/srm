@@ -1,0 +1,21 @@
+# export TRASH="$HOME/TRASH"
+# in .bashrc file
+
+#!/bin/bash
+#Andrea Castellanos
+#93578193
+#castell3
+
+# for all of the arguments given by the user
+#  if it is a file or directory
+#   move it with the backup option of numbering them
+#  otherwise echo error
+
+for i in "$@"
+do
+	if [ -f "$i" ] || [ -d "$i" ]; then
+		mv --backup=numbered "$i" $TRASH
+	else
+		echo ""$i" does not exist"
+	fi
+done

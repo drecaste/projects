@@ -1,0 +1,32 @@
+#!/bin/bash
+#Andrea Castellanos
+#93578193
+#castell3
+
+# if the first argument is -a,
+# 	then it will move all of the files
+# 	to the user's current directory
+
+if [ "$1" == "-a" ]; then
+	for j in $TRASH/*
+	do
+		mv "$j" $PWD
+	done
+	exit;
+else
+
+# if $1 is not -a
+#  for all of the arguments given by the user
+#   if it is a file or directory
+#   restore/unrm to their current working directory
+#  if it is not in $TRASH, echo error
+
+	for i in "$@"
+	do
+		if [ -f $TRASH/"$i" ] || [ -d $TRASH/"$i" ]; then 
+			mv $TRASH/"$i" $PWD
+		else
+			echo ""$i" not in trash"
+		fi
+	done
+fi

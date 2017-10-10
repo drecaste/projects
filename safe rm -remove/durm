@@ -1,0 +1,9 @@
+#!/bin/bash
+#Andrea Castellanos
+#93578193
+#castell3
+
+# shows the disk usage of the files 
+# that are currently in $TRASH 
+
+du $TRASH

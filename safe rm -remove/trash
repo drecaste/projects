@@ -1,0 +1,12 @@
+#!/bin/bash
+#Andrea Castellanos
+#93578193
+#castell3
+
+# for all of the items in $TRASH
+# 	recursively rm/delete the items
+
+for i in $TRASH/*
+do
+	rm -r "$i"
+done

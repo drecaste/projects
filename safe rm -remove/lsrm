@@ -1,0 +1,9 @@
+#!/bin/bash
+#Andrea Castellanos
+#93578193
+#castell3
+
+# recursively and long-list list information
+# about all of the files in $TRASH
+
+ls -lR $TRASH
