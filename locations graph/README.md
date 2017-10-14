@@ -3,4 +3,4 @@ Digraph.hpp and main.cpp are the main project files that use the rest of the fil
 Image of output:
 
 
-![Image of output](https://raw.githubusercontent.com/drecaste/projects/main/locations_graph/output.png)
+![Image of output](https://raw.githubusercontent.com/drecaste/projects/main/locations%20graph/output.png)
