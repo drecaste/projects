@@ -1,4 +1,3 @@
-
 void UART_Init(unsigned int ubrr);
 unsigned char USART_Receive( void );
 void USART_Transmit(unsigned char data);
@@ -39,7 +38,7 @@ void SPI_MasterTransmit(uint16_t cData)
 int main(void)
 {
 	DDRC |= (1 << DDC1); // input knob
-	DDRD |= (1 << DDD6); // output (led)		???
+	DDRD |= (1 << DDD6); // output (led)
 
 	UART_Init(MYUBRR);
 	InitADC();
@@ -69,13 +68,13 @@ int main(void)
 		USART_AllText(temp2);
 		USART_AllText("\r\n");
 
-		PORTB &= ~(1 << SPI_SS);					// slave select low
+		PORTB &= ~(1 << SPI_SS);				// slave select low
 
-		voltage |= (1<<12) | (1<<13);				// output gain bit = 1, output power down = 1
+		voltage |= (1<<12) | (1<<13);			// output gain bit = 1, output power down = 1
 		SPI_MasterTransmit(voltage >> 8);
-		SPI_MasterTransmit(voltage & 0xFF);	// 0b11111111 // 255
+		SPI_MasterTransmit(voltage & 0xFF);		// 0b11111111 // 255
 
-		PORTB |= (1 << SPI_SS);						// slave select high
+		PORTB |= (1 << SPI_SS);					// slave select high
 	}
 }
 
@@ -127,3 +126,4 @@ void USART_AllText(char * text)
 		USART_Transmit(*text++);
 	}
 }
+

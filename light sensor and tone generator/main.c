@@ -1,11 +1,3 @@
-/*
- * lab5.c
- *
- * Created: 5/24/2017 1:13:17 PM
- * Author : Andrea
- */ 
-
-
 #include<avr/io.h>
 #include<util/delay.h>
 #include<stdio.h>
@@ -130,5 +122,3 @@ unsigned char GetADCResult(void)
 	while (ADCSRA & 1<<ADSC);
 	return (ADCH);
 }
-
-
